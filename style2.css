@@ -1,0 +1,163 @@
+/* Importation de la police Google "Roboto" avec différentes épaisseurs */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+/* Styles pour les écrans de moins de 991px */
+@media(max-width:991px) {
+    html {
+        font-size: 55px; /* Réduit la taille de la police pour les petits écrans */
+    }
+    .header {
+        padding: 1.5rem 2rem; /* Ajuste l'espacement dans l'en-tête */
+    }
+    section {
+        padding: 2rem; /* Réduit l'espacement des sections */
+    }
+}
+
+/* Styles globaux pour tous les éléments */
+* {
+    font-family: "Roboto", sans-serif; /* Applique la police Roboto */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les remplissages par défaut */
+    box-sizing: border-box; /* Inclut les bordures dans les dimensions */
+    outline: none; /* Supprime les contours */
+    border: none; /* Supprime les bordures par défaut */
+    text-decoration: none; /* Supprime les soulignements sur les liens */
+    text-transform: capitalize; /* Met la première lettre en majuscule */
+    transition: .2s linear; /* Ajoute une transition fluide aux changements */
+}
+
+/* Configuration générale pour l'élément HTML */
+html {
+    font-size: 62.5%; /* Définit la base pour des tailles en rem */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    scroll-padding-top: 9rem; /* Ajoute un espacement au haut lors du défilement */
+    scroll-behavior: smooth; /* Active un défilement fluide */
+}
+
+/* Styles pour le corps de la page */
+body {
+    font-family: Arial, sans-serif; /* Définit la police par défaut */
+    line-height: 1.8; /* Améliore l'espacement entre les lignes */
+    background-color: #9c9c9c; /* Définit une couleur de fond grise */
+    color: #333; /* Définit la couleur du texte */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les remplissages */
+    text-align: justify; /* Justifie le texte */
+}
+
+/* Personnalisation de la barre de défilement */
+html::-webkit-scrollbar {
+    width: .8rem; /* Définit la largeur de la barre */
+}
+html::-webkit-scrollbar-track {
+    background: transparent; /* Définit une piste transparente */
+}
+html::-webkit-scrollbar-thumb {
+    background: #0f0f0f; /* Définit une couleur sombre pour le curseur */
+    border-radius: 5rem; /* Arrondit les bords du curseur */
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #007BFF; /* Définit une couleur de fond bleue */
+    color: white; /* Définit une couleur de texte blanche */
+    text-align: center; /* Centre le contenu horizontalement */
+    padding: 20px; /* Ajoute un remplissage autour du texte */
+}
+
+/* Styles pour le titre principal dans l'en-tête */
+header h1 {
+    margin: 0; /* Supprime les marges */
+    font-size: 2em; /* Définit la taille de la police */
+}
+
+/* Icônes cliquables */
+.icon {
+    font-size: 24px; /* Définit la taille des icônes */
+    color: #333; /* Définit la couleur des icônes */
+    cursor: pointer; /* Change le curseur pour indiquer un clic */
+    text-decoration: none; /* Supprime le soulignement */
+}
+.icon:hover {
+    color: #000000; /* Change la couleur au survol */
+}
+
+/* Section de la "vie" avec des images et du texte */
+.life .row {
+    display: flex; /* Active un flexbox pour aligner les éléments */
+    align-items: center; /* Centre verticalement les éléments */
+    background: #000; /* Définit une couleur de fond noire */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    flex-direction: row; /* Positionne l'image à gauche */
+    padding: 2rem; /* Ajoute un espacement interne */
+    border-radius: 1rem; /* Arrondit les coins */
+    margin-bottom: 1.5rem; /* Ajoute un espacement entre les sections */
+}
+
+/* Conteneur pour les images dans la section "vie" */
+.life .row .image {
+    flex: 1 1 45rem; /* Définit une largeur flexible */
+    display: flex; /* Centre le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+/* Styles pour les images */
+.life .row .image img {
+    width: 25rem; /* Définit une largeur fixe */
+    height: 25rem; /* Définit une hauteur fixe */
+    object-fit: cover; /* Remplit l'espace sans distorsion */
+    border-radius: 1rem; /* Ajoute des coins arrondis */
+    border: 0.2rem solid #fff; /* Ajoute une bordure blanche */
+}
+
+/* Conteneur pour le texte dans la section "vie" */
+.life .row .content {
+    flex: 1 1 45rem; /* Définit une largeur flexible */
+    padding: 2rem; /* Ajoute un espacement interne */
+}
+
+/* Titre dans la section "vie" */
+.life .row .content h3 {
+    font-size: 3rem; /* Définit la taille du titre */
+    color: #fff; /* Définit la couleur blanche */
+}
+
+/* Paragraphe dans la section "vie" */
+.life .row .content p {
+    font-size: 1.6rem; /* Définit la taille de la police */
+    color: #ccc; /* Définit une couleur grise claire */
+    padding: 1rem 0; /* Ajoute un espacement vertical */
+    line-height: 1.8; /* Améliore l'espacement entre les lignes */
+}
+
+/* Inversion de l'ordre des éléments pour les sections paires */
+.life:nth-child(even) .row {
+    flex-direction: row-reverse; /* Inverse l'image et le texte */
+}
+
+/* Styles pour les listes */
+ul {
+    padding-right: 20px; /* Ajoute un espacement à droite */
+    margin-top: 10px; /* Ajoute un espacement au-dessus */
+    font-size: large; /* Définit une taille de police plus grande */
+    color: #9c9c9c; /* Définit une couleur grise */
+}
+ul li {
+    margin-bottom: 10px; /* Ajoute un espacement entre les éléments */
+}
+
+/* Styles pour le pied de page */
+footer {
+    text-align: center; /* Centre le texte horizontalement */
+    background-color: #333; /* Définit une couleur de fond sombre */
+    color: white; /* Définit une couleur de texte blanche */
+    padding: 10px; /* Ajoute un espacement interne */
+    margin-top: 20px; /* Ajoute un espacement au-dessus */
+}
+
+/* Paragraphe dans le pied de page */
+footer p {
+    margin: 0; /* Supprime les marges */
+}

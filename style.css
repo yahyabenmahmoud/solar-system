@@ -1,0 +1,487 @@
+/* Importation de la police Roboto depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+/* Styles pour les écrans dont la largeur est inférieure à 991px */
+@media(max-width:991px){
+    html{
+        font-size: 55px; /* Taille de police réduite */
+    }
+    .header{
+        padding: 1.5rem 2rem; /* Réduction de l'espacement interne du header */
+    }
+    section{
+        padding: 2rem; /* Réduction de l'espacement interne des sections */
+    }
+}
+
+/* Définition des variables CSS pour une gestion centralisée des couleurs et styles */
+:root{
+    --main-color : #1f21a759; /* Couleur principale (semi-transparente) */
+    --black : #13131a; /* Couleur noire foncée */
+    --bg : #010103; /* Couleur de fond principale (très sombre) */
+    --border: 0.2rem solid rgba(255, 255, 255, 0.4); /* Bordure blanche semi-transparente */
+}
+
+/* Réinitialisation des marges, paddings et autres propriétés globales */
+*{
+    font-family: "Roboto", sans-serif; /* Définition de la police par défaut */
+    margin: 0; /* Réinitialisation des marges */
+    padding: 0; /* Réinitialisation des paddings */
+    box-sizing: border-box; /* Inclut bordures et paddings dans les dimensions */
+    outline: none; /* Supprime les contours par défaut */
+    border: none; /* Supprime les bordures par défaut */
+    text-decoration: none; /* Supprime les soulignements des textes/éléments */
+    text-transform: capitalize; /* Capitalisation automatique */
+    transition: .2s linear; /* Transition fluide pour les effets */
+}
+
+/* Style de base pour l'élément HTML */
+html{
+    font-size: 62.5%; /* Base de 10px pour calculer les rem */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    scroll-padding-top: 9rem; /* Ajout d'un espace pour les ancres */
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
+/* Style de la barre de défilement */
+html::-webkit-scrollbar{
+    width: .8rem; /* Largeur de la barre de défilement */
+}
+html::-webkit-scrollbar-track{
+    background: transparent; /* Fond transparent pour la piste */
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff; /* Curseur blanc */
+    border-radius: 5rem; /* Bordures arrondies pour le curseur */
+}
+
+/* Style de base pour le corps de la page */
+body {
+    background: var(--bg); /* Fond sombre défini par la variable */
+}
+
+/* Espacement général pour toutes les sections */
+section{
+    padding: 2rem 7%; /* Espacement interne (haut/bas et gauche/droite) */
+}
+
+/* Style des titres principaux des sections */
+.heading{
+    text-align: center; /* Centrage du texte */
+    color: #007BFF; /* Couleur bleue pour le texte */
+    text-transform: uppercase; /* Texte en majuscules */
+    padding-bottom: 4rem; /* Espacement en bas du titre */
+    font-size: 4rem; /* Taille de police pour les titres */
+}
+
+/* Couleur et style pour les mots clés (span) dans les titres */
+.heading span{
+    color: var(--main-color); /* Utilisation de la couleur principale */
+    text-transform: uppercase; /* Texte en majuscules */
+}
+
+/* Style du header (bande supérieure fixe) */
+header {
+    background: var(--bg); /* Fond sombre */
+    text-align: center; /* Centrage du texte */
+    display: flex; /* Flexbox pour l'alignement */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    padding: 1rem 25%; /* Espacement interne (haut/bas et gauche/droite) */
+    border-bottom: var(--border); /* Bordure en bas du header */
+    position: fixed; /* Position fixe pour toujours afficher le header */
+    top: 0; /* Placement en haut de la page */
+    left: 0; /* Placement à gauche */
+    right: 0; /* Placement à droite */
+}
+
+/* Style des liens dans la navigation du header */
+.header .navigation a{
+    margin: 0 1rem; /* Espacement entre les liens */
+    font-size: 1.6rem; /* Taille de police pour les liens */
+    color: #fff; /* Couleur blanche pour les liens */
+}
+
+/* Style des liens au survol dans le header */
+.header .navigation a:hover{
+    color: var(--main-color); /* Changement de couleur au survol */
+    border-bottom: 0.3rem solid var(--main-color); /* Soulignement en couleur principale */
+    padding-bottom: .2rem; /* Espacement sous le texte au survol */
+}
+
+/* Section principale avec fond d'image et alignement vertical centré */
+.homme {
+    min-height: 100vh; /* Définit une hauteur minimale de 100% de la hauteur de la fenêtre */
+    display: flex; /* Utilise un flexbox pour organiser le contenu */
+    align-items: center; /* Centre le contenu verticalement */
+    background-image: url('earth2.jpg'); /* Définit une image de fond */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+    background-size: cover; /* Redimensionne l'image pour couvrir toute la section */
+    background-position: center; /* Centre l'image de fond */
+}
+
+/* Style pour les titres dans la section homme */
+.homme .content h3 {
+    font-size: 4rem; /* Définit une grande taille de police */
+    text-transform: uppercase; /* Transforme le texte en majuscules */
+    color: #37837d; /* Définit une couleur de texte spécifique */
+}
+
+/* Style pour les paragraphes dans la section homme */
+.homme .content p {
+    font-size: 2rem; /* Définit la taille de la police */
+    font-weight: lighter; /* Rend le texte plus fin */
+    line-height: 1.8; /* Ajoute de l'espace entre les lignes */
+    padding: 1rem 0; /* Ajoute un espacement vertical */
+    color: #ffffff; /* Définit la couleur du texte */
+}
+
+/* Style général pour les boutons */
+.btn {
+    display: inline-block; /* Transforme le bouton en élément en ligne avec des propriétés de bloc */
+    padding: 10px 20px; /* Ajoute un espace interne (haut/bas et gauche/droite) */
+    font-size: 16px; /* Définit la taille de la police */
+    font-weight: bold; /* Rend le texte en gras */
+    color: white; /* Définit la couleur du texte */
+    background-color: #007BFF; /* Définit une couleur de fond */
+    border: none; /* Supprime les bordures par défaut */
+    border-radius: 5px; /* Arrondit les coins du bouton */
+    cursor: pointer; /* Change le curseur en pointeur au survol */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: all 0.3s ease; /* Ajoute une transition fluide pour les changements de style */
+}
+
+/* Effets au survol du bouton */
+.btn:hover {
+    background-color: #0056b3; /* Change la couleur de fond au survol */
+    color: #dbdbdb; /* Change la couleur du texte au survol */
+    transform: scale(1.1); /* Agrandit légèrement le bouton */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile */
+}
+
+/* Effets lorsque le bouton est cliqué */
+.homme .content .btn:active {
+    transform: scale(1); /* Réduit légèrement la taille lors du clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduit l'ombre */
+}
+
+/* Conteneur de la section à propos */
+.about .row {
+    display: flex; /* Utilise un flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Centre verticalement les éléments */
+    background: var(--black); /* Définit une couleur de fond personnalisée */
+    flex-wrap: wrap; /* Permet de passer à la ligne pour les petits écrans */
+}
+
+/* Section pour les images dans "à propos" */
+.about .row .image {
+    flex: 1 1 45rem; /* Alloue de l'espace flexible avec une base de 45rem */
+}
+
+/* Contenu textuel dans la section "à propos" */
+.about .row .content {
+    flex: 1 1 45rem; /* Alloue de l'espace flexible avec une base de 45rem */
+    padding: 2rem; /* Ajoute un espacement interne */
+}
+
+/* Style pour les titres dans "à propos" */
+.about .row .content h3 {
+    font-size: 3rem; /* Définit une taille de police moyenne */
+    color: #fff; /* Définit la couleur blanche pour le texte */
+}
+
+/* Style pour les paragraphes dans "à propos" */
+.about .row .content p {
+    font-size: 1.6rem; /* Définit une taille de police plus petite */
+    color: #ccc; /* Définit une couleur gris clair */
+    padding: 1rem 0; /* Ajoute un espacement vertical */
+    line-height: 1.8; /* Définit un espacement entre les lignes */
+}
+
+/* Style pour les iframes */
+iframe {
+    width: 100%; /* Définit une largeur de 100% */
+    height: 600px; /* Définit une hauteur personnalisée */
+    border: none; /* Supprime la bordure */
+}
+
+/* Conteneur de la section des avis */
+.review .bow-container {
+    display: grid; /* Utilise une grille pour organiser les éléments */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Crée une grille responsive */
+    gap: 1.5rem; /* Ajoute un espacement entre les éléments */
+}
+
+/* Style pour les boîtes dans les avis */
+.review .bow-container .box {
+    border: var(--border); /* Applique une bordure personnalisée */
+    text-align: center; /* Centre le texte horizontalement */
+    padding: 3rem 2rem; /* Ajoute des espacements internes */
+}
+
+/* Style pour les paragraphes dans les boîtes */
+.review .bow-container .box p {
+    font-size: 1.6rem; /* Définit la taille de la police */
+    line-height: 1.8; /* Ajoute un espacement entre les lignes */
+    color: #ccc; /* Définit une couleur gris clair */
+    padding: 2rem 0; /* Ajoute un espacement vertical */
+}
+
+/* Style pour les images de scientifiques */
+.review .bow-container .box .Scientist {
+    height: 7rem; /* Définit la hauteur de l'image */
+    width: 7rem; /* Définit la largeur de l'image */
+    border-radius: 50%; /* Rend l'image circulaire */
+    object-fit: cover; /* Assure que l'image s'adapte sans déformation */
+}
+
+/* Style pour les titres dans les avis */
+.review .bow-container .box h3 {
+    padding: 1rem 0; /* Ajoute un espacement vertical autour du titre */
+    font-size: 2rem; /* Définit la taille de la police */
+    color: #fff; /* Définit une couleur blanche pour le texte */
+}
+
+/* Conteneur principal de la section contact */
+.contact {
+    padding: 40px; /* Ajoute un espacement interne global */
+}
+
+/* Style pour le titre principal de la section contact */
+.contact .heading {
+    font-size: 2.5rem; /* Définit une taille de police plus grande */
+    text-align: center; /* Centre le texte horizontalement */
+    margin-bottom: 20px; /* Ajoute un espacement sous le titre */
+}
+
+/* Conteneur pour organiser le contenu de la section contact */
+.contact .row {
+    display: flex; /* Utilise un flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Centre verticalement les éléments */
+    background: var(--black); /* Définit une couleur de fond noire */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    gap: 1rem; /* Ajoute un espace entre les éléments */
+}
+
+/* Table dans la section contact */
+.table-contact .content {
+    margin: 20px; /* Ajoute un espacement autour de la table */
+    border-collapse: collapse; /* Supprime l'espace entre les bordures des cellules */
+    float: right; /* Aligne la table à droite */
+    text-align: right; /* Aligne le texte des cellules à droite */
+}
+
+/* Style pour les cellules de la table */
+.table-contact th, td {
+    border: 1px solid #ffffff; /* Ajoute une bordure blanche */
+    padding: 10px; /* Ajoute un espacement interne aux cellules */
+}
+
+/* Style pour les liens dans la table */
+.table-contact a {
+    color: #4a90e2; /* Définit une couleur bleue pour les liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+}
+
+/* Effet de survol pour les liens dans la table */
+.table-contact a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+/* Contenu textuel dans la section contact */
+.contact .row .content {
+    flex: 1 1 45rem; /* Alloue de l'espace flexible avec une base de 45rem */
+    padding: 2rem; /* Ajoute un espacement interne */
+}
+
+/* Carte/iframe dans la section contact */
+.contact .row .map {
+    width: 50%; /* Définit la largeur de l'iframe */
+    height: 400px; /* Définit une hauteur fixe pour l'iframe */
+    border-radius: 10px; /* Ajoute des coins arrondis à l'iframe */
+}
+
+/* Informations de contact textuelles */
+.contact .contact-info {
+    font-size: 1.6rem; /* Définit une taille de police */
+    color: #ccc; /* Définit une couleur gris clair */
+    padding: 1rem 0; /* Ajoute un espacement vertical */
+    line-height: 1.8; /* Définit un espacement entre les lignes */
+}
+
+/* Liens dans la section contact */
+.contact .content a {
+    color: #0073b1; /* Définit une couleur bleue pour les liens LinkedIn */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+}
+
+/* Formulaire général */
+.formulaire {
+    background: var(--black); /* Définit une couleur de fond noire */
+    color: #fff; /* Définit une couleur blanche pour le texte */
+    padding: 3rem 1rem; /* Ajoute des espacements internes */
+    font-family: Arial, sans-serif; /* Applique une police sans-serif */
+    direction: rtl; /* Définit la direction du texte de droite à gauche */
+    text-align: right; /* Aligne le texte à droite */
+}
+
+/* Conteneur pour le formulaire */
+.formulaire .container {
+    display: flex; /* Utilise un flexbox pour organiser les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 2rem; /* Ajoute un espace entre les éléments */
+}
+
+/* Boîte pour les authentifications */
+.auth-box {
+    background: #333; /* Définit une couleur de fond gris foncé */
+    padding: 2rem; /* Ajoute des espacements internes */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Ajoute une ombre */
+    width: 100%; /* Définit une largeur maximale */
+    max-width: 400px; /* Limite la largeur à 400px */
+}
+
+/* Titre dans la boîte d'authentification */
+.auth-box h2 {
+    font-size: 2rem; /* Définit la taille de la police */
+    margin-bottom: 1.5rem; /* Ajoute un espacement sous le titre */
+    color: #4ca1af; /* Définit une couleur turquoise */
+}
+
+/* Groupe de champs dans la boîte d'authentification */
+.auth-box .form-group {
+    margin-bottom: 1.5rem; /* Ajoute un espacement entre les champs */
+}
+
+/* Label pour les champs */
+.auth-box label {
+    display: block; /* Affiche le label comme un bloc */
+    margin-bottom: 0.5rem; /* Ajoute un espacement sous le label */
+    font-size: large; /* Définit une taille de police plus grande */
+    color: #ccc; /* Définit une couleur gris clair */
+}
+
+/* Champs d'entrée dans la boîte d'authentification */
+.auth-box input[type="email"],
+.auth-box input[type="password"],
+.auth-box input[type="text"] {
+    width: 100%; /* Définit une largeur de 100% */
+    padding: 0.8rem; /* Ajoute des espacements internes */
+    border: 1px solid #666; /* Ajoute une bordure grise */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+    background: #222; /* Définit une couleur de fond gris foncé */
+    color: #fff; /* Définit une couleur blanche pour le texte */
+    font-size: large; /* Définit une taille de police plus grande */
+}
+
+/* Groupe de cases à cocher */
+.auth-box .checkbox-group {
+    display: flex; /* Utilise un flexbox pour organiser les cases */
+    align-items: center; /* Centre verticalement les cases et les étiquettes */
+    gap: 0.5rem; /* Ajoute un espace entre la case et son label */
+}
+
+/* Taille des cases à cocher */
+.auth-box .checkbox-group input {
+    transform: scale(1.2); /* Agrandit légèrement les cases à cocher */
+}
+
+/* Lien pour le mot de passe oublié */
+.auth-box .forgot-password {
+    display: block; /* Affiche le lien comme un bloc */
+    margin: 1rem 0; /* Ajoute un espacement vertical */
+    font-size: large; /* Définit une taille de police plus grande */
+    color: #4ca1af; /* Définit une couleur turquoise */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+}
+
+/* Effet de survol pour le lien du mot de passe oublié */
+.auth-box .forgot-password:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+/* Bouton dans la boîte d'authentification */
+.auth-box .btn {
+    display: block; /* Affiche le bouton comme un bloc */
+    width: 100%; /* Définit une largeur de 100% */
+    padding: 0.8rem; /* Ajoute des espacements internes */
+    border: none; /* Supprime les bordures par défaut */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+    background: #4ca1af; /* Définit une couleur de fond turquoise */
+    color: #fff; /* Définit une couleur blanche pour le texte */
+    font-size: large; /* Définit une taille de police plus grande */
+    cursor: pointer; /* Change le curseur au survol */
+    transition: background 0.3s ease; /* Ajoute une transition fluide */
+}
+/* Effet de survol pour le bouton dans la boîte d'authentification */
+.auth-box .btn:hover {
+    background: #3b8e99; /* Change la couleur de fond au survol */
+}
+
+/* Style pour les paragraphes dans la boîte d'authentification */
+.auth-box p {
+    margin-top: 1rem; /* Ajoute un espacement au-dessus du paragraphe */
+    font-size: large; /* Définit une taille de police plus grande */
+}
+
+/* Liens dans les paragraphes de la boîte d'authentification */
+.auth-box p a {
+    color: #4ca1af; /* Définit une couleur turquoise pour les liens */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+}
+
+/* Effet de survol pour les liens dans la boîte d'authentification */
+.auth-box p a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+/* Design réactif pour les écrans de moins de 768px */
+@media (max-width: 768px) {
+    .auth-section .container {
+        flex-direction: column; /* Arrange les éléments en colonne */
+        align-items: center; /* Centre les éléments horizontalement */
+    }
+}
+
+/* Style général pour le pied de page */
+.footer {
+    background: var(--black); /* Définit une couleur de fond noire */
+    text-align: center; /* Centre tout le texte horizontalement */
+}
+
+/* Liens dans le pied de page */
+.footer .links {
+    display: flex; /* Utilise un flexbox pour organiser les liens */
+    justify-content: center; /* Centre les liens horizontalement */
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne si nécessaire */
+    padding: 2rem 0; /* Ajoute des espaces internes au-dessus et en dessous */
+    gap: 1rem; /* Ajoute un espacement entre les liens */
+}
+
+/* Style individuel pour chaque lien du pied de page */
+.footer .links a {
+    padding: 2rem 1rem; /* Ajoute un espacement interne vertical et horizontal */
+    color: #fff; /* Définit une couleur blanche pour le texte */
+    border: var(--border); /* Applique une bordure prédéfinie */
+    font-size: 2rem; /* Définit une taille de police plus grande */
+}
+
+/* Effet de survol pour les liens dans le pied de page */
+.footer .links a:hover {
+    background: var(--main-color); /* Change la couleur de fond au survol */
+}
+
+/* Style pour le texte d'attribution dans le pied de page */
+.footer .credit {
+    font-size: 2rem; /* Définit une taille de police plus grande */
+    color: #fff; /* Définit une couleur blanche pour le texte */
+    font-weight: lighter; /* Utilise une police plus fine */
+    padding: 1.5rem; /* Ajoute des espaces internes autour du texte */
+}
+
+/* Accentuation pour certaines parties du texte d'attribution */
+.footer .credit span {
+    color: #007BFF; /* Définit une couleur bleue spécifique */
+}

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+/* Appliquer une taille de police réduite pour les écrans de moins de 991px */
+@media(max-width:991px){
+    html{
+        font-size: 55px; /* Réduit la taille de la police principale */
+    }
+    .header{
+        padding: 1.5rem 2rem; /* Ajuste les marges intérieures de l'en-tête */
+    }
+    section{
+        padding: 2rem; /* Ajuste les marges intérieures des sections */
+    }
+}
+
+/* Style global pour tous les éléments */
+*{
+    font-family: "Roboto", sans-serif; /* Applique la police Roboto */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    box-sizing: border-box; /* Inclut les bordures et paddings dans la taille totale */
+    outline: none; /* Supprime le contour bleu des éléments focusés */
+    border: none; /* Supprime les bordures par défaut */
+    text-decoration: none; /* Supprime la décoration des liens */
+    text-transform: capitalize; /* Met la première lettre en majuscule */
+    transition: .2s linear; /* Applique une transition fluide sur les changements */
+}
+
+/* Style général pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif; /* Utilise la police Arial en secours */
+    line-height: 1.6; /* Définit l'interligne pour améliorer la lisibilité */
+    margin: 0; /* Supprime les marges externes */
+    padding: 0; /* Supprime les paddings internes */
+    text-align: right; /* Aligne le texte à droite */
+    direction: rtl; /* Définit la direction du texte de droite à gauche */
+}
+
+/* Style pour l'en-tête */
+.header {
+    background: #0d47a1; /* Définit un fond bleu */
+    color: white; /* Texte en blanc */
+    padding: 20px 10px; /* Espacement intérieur */
+}
+
+/* Style pour les liens dans la navigation */
+.navigation a {
+    color: white; /* Couleur blanche pour les liens */
+    margin: 0 10px; /* Espacement entre les liens */
+    text-decoration: none; /* Supprime la décoration des liens */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Style pour la section hero */
+.hero {
+    text-align: center; /* Centre le contenu */
+    padding: 50px; /* Espacement intérieur important */
+    background: #e3f2fd; /* Couleur de fond bleu clair */
+}
+
+/* Style pour le bouton de la section hero */
+.hero .btn {
+    background: #0d47a1; /* Fond bleu */
+    color: white; /* Texte blanc */
+    padding: 10px 20px; /* Espacement intérieur */
+    text-decoration: none; /* Supprime la décoration */
+    border-radius: 5px; /* Coins arrondis */
+    display: inline-block; /* Bloque pour un bouton */
+}
+
+/* Style pour la section des fonctionnalités */
+.features {
+    padding: 20px; /* Espacement intérieur */
+    background: black; /* Fond noir */
+    color: white; /* Texte blanc */
+    font-family: Arial, sans-serif; /* Police Arial */
+    direction: rtl; /* Texte aligné de droite à gauche */
+}
+
+/* Style pour le tableau des fonctionnalités */
+.feature-table {
+    width: 100%; /* Occupe toute la largeur */
+    border-collapse: collapse; /* Supprime les espaces entre les cellules */
+    margin: 20px 0; /* Espacement externe */
+    border: 2px solid dimgray; /* Bordure solide grise */
+    font-size: 1.2rem; /* Taille de police augmentée */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Ombre subtile pour effet visuel */
+}
+
+/* Style pour les en-têtes du tableau */
+.feature-table th {
+    background: #3a3a3a; /* Fond gris foncé */
+    color: white; /* Texte blanc */
+    padding: 15px; /* Espacement intérieur */
+    font-size: 1.5rem; /* Taille de police augmentée */
+    text-transform: uppercase; /* Texte en majuscule */
+    border: 2px solid dimgray; /* Bordure grise */
+}
+
+/* Style pour les cellules du tableau */
+.feature-table td {
+    padding: 15px; /* Espacement intérieur */
+    text-align: center; /* Texte centré */
+    background: #1a1a1a; /* Fond légèrement plus clair */
+    color: white; /* Texte blanc */
+    border: 1px solid dimgray; /* Bordure grise */
+}
+
+/* Effet au survol des lignes du tableau */
+.feature-table tbody tr:hover {
+    background: #333333; /* Fond légèrement éclairci */
+    color: white; /* Texte blanc conservé */
+}
+
+/* Style responsive pour les petits écrans */
+@media (max-width: 768px) {
+    .feature-table {
+        font-size: 1rem; /* Réduit la taille de police */
+    }
+}
+
+/* Style pour la section "À propos" */
+.about .row {
+    display: flex; /* Mise en page flexible */
+    align-items: center; /* Aligne les éléments verticalement */
+    background-color: black; /* Fond noir */
+    flex-wrap: wrap; /* Permet le retour à la ligne */
+}
+
+/* Style pour les images dans la section "À propos" */
+.about .row .image {
+    flex: 1 1 50%; /* Prend 50% de la largeur */
+    text-align: center; /* Centre l'image */
+}
+
+/* Style pour les images */
+.about .row .image img {
+    width: 100%; /* Adapte la largeur à son conteneur */
+    max-width: 450px; /* Largeur maximale */
+    height: auto; /* Maintient les proportions */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Style pour le contenu textuel de "À propos" */
+.about .row .content {
+    flex: 1 1 50%; /* Prend 50% de la largeur */
+    padding: 2rem; /* Espacement intérieur */
+    direction: rtl; /* Texte de droite à gauche */
+}
+
+/* Style pour les titres dans "À propos" */
+.about .row .content h4 {
+    font-size: 3rem; /* Taille du titre */
+    color: #fff; /* Texte blanc */
+}
+
+/* Style pour les paragraphes */
+.about .row .content p {
+    font-size: 1.6rem; /* Taille de texte */
+    color: #ccc; /* Texte gris clair */
+    padding: 1rem 0; /* Espacement vertical */
+    line-height: 1.8; /* Espacement entre les lignes */
+}
+
+/* Transition au survol des lignes */
+.row {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition pour effet visuel */
+}
+
+.row:hover {
+    transform: scale(1.02); /* Agrandit légèrement */
+    opacity: 0.9; /* Réduit l'opacité */
+}
+
+/* Style pour la barre de défilement */
+html::-webkit-scrollbar{
+    width: .8rem; /* Largeur de la barre */
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent; /* Fond transparent */
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff; /* Curseur blanc */
+    border-radius: 5rem; /* Coins arrondis */
+}
